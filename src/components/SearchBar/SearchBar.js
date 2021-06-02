@@ -45,7 +45,7 @@ const SearchBar = ({term, location, sortBy, handleTermChange, handleLocationChan
                 <input placeholder="Where?" value={location} onChange={(e)=>{handleLocationChange(e)}}/>
             </div>
             <div className="SearchBar-submit" onClick={(e)=>{handleSearch(e)}}>
-                <a>Time To Eat</a>
+                <div>Time To Eat</div>
                 <><ToastContainer/></>
             </div>
         </div>)
