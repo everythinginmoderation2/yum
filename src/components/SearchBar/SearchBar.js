@@ -44,8 +44,8 @@ const SearchBar = ({term, location, sortBy, handleTermChange, handleLocationChan
                 <input placeholder="Search Businesses" value={term} onChange={(e) => {handleTermChange(e)}}/>
                 <input placeholder="Where?" value={location} onChange={(e)=>{handleLocationChange(e)}}/>
             </div>
-            <div className="SearchBar-submit" onClick={(e)=>{handleSearch(e)}}>
-                <div>Time To Eat</div>
+            <div className="SearchBar-submit">
+                <a href="javascript:(e)=>{handleSearch(e)}" onClick={(e)=>{handleSearch(e)}}>Time To Eat</a>
                 <><ToastContainer/></>
             </div>
         </div>)
