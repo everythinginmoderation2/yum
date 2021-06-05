@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
+import axios from 'axios'
 
 const App = () => {
   const API_KEY = process.env.REACT_APP_YELP_API_KEY;
@@ -24,9 +25,8 @@ const App = () => {
 
   const timeToEat = async (term, location, sortBy) => {
     try {
-      const response = await fetch(
-        `https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,
-        { headers: { Authorization: `Bearer ${API_KEY}` } },
+      const response = await axios.get(
+        `https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`
       );
       const data = await response.json();
       console.log(data);
