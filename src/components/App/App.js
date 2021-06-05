@@ -26,7 +26,7 @@ const App = () => {
   const timeToEat = async (term, location, sortBy) => {
     try {
       const response = await axios.get(
-        `https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`
+        `/search?term=${term}&location=${location}&sort_by=${sortBy}`
       );
       const data = await response.json();
       console.log(data);
