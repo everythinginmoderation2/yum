@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import axios from 'axios'
 
 const App = () => {
-  const API_KEY = process.env.REACT_APP_YELP_API_KEY;
+  const API = process.env.REACT_APP_BACKEND_API;
   const [location, setLocation] = useState("");
   const [term, setTerm] = useState("");
   const [sortBy, setSortBy] = useState("best_match");
@@ -26,7 +26,7 @@ const App = () => {
   const timeToEat = async (term, location, sortBy) => {
     try {
       const response = await axios.get(
-        `/search?term=${term}&location=${location}&sort_by=${sortBy}`
+        `${API}/search?term=${term}&location=${location}&sort_by=${sortBy}`
       );
       const data = await response.json();
       console.log(data);
