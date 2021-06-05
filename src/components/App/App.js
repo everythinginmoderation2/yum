@@ -5,7 +5,6 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const App = () => {
   const API_KEY = process.env.REACT_APP_YELP_API_KEY;
-  // const CLIENT_ID = process.env.REACT_APP_YELP_CLIENT_ID;
   const [location, setLocation] = useState("");
   const [term, setTerm] = useState("");
   const [sortBy, setSortBy] = useState("best_match");
