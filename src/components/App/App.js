@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
-import axios from 'axios'
+import api from '../../apiService'
 
 const App = () => {
   const API = process.env.REACT_APP_BACKEND_API;
@@ -25,10 +25,9 @@ const App = () => {
 
   const timeToEat = async (term, location, sortBy) => {
     try {
-      const response = await axios.get(
+      const data = await api.get(
         `${API}/search?term=${term}&location=${location}&sort_by=${sortBy}`
       );
-      const data = await response.json();
       console.log(data);
       setBusinesses(data.businesses);
       console.log(businesses)

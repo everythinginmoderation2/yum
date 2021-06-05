@@ -19,6 +19,7 @@ const api = axios.create({
 api.interceptors.request.use(
   (request) => {
     console.log("Starting Request", request);
+    return request;
   },
   function (error) {
     console.log("REQUEST ERROR", error);
