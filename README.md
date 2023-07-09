@@ -1,5 +1,3 @@
-yelp clone built while practicing on Codecademy, then updated using state hooks and async functions.
+yelp frontend practice on Codecademy that introduced state hooks and async functions.
 
-bugs: throwing cors-error (simple debug for a later date...) 
-
-https://focused-keller-89d117.netlify.app/
+https://yelp-frontend-intro-to-ps.netlify.app/
